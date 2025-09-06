@@ -1,0 +1,129 @@
+/* Base styling for the Todo app */
+
+/* CSS variables for colors and fonts */
+:root {
+  --primary-color: #2c3e50;   /* dark blue-gray */
+  --secondary-color: #ecf0f1; /* light gray */
+  --accent-color: #3498db;    /* bright blue */
+  --bg-color: #ffffff;       /* white background */
+  --text-color: #333333;     /* default text */
+  --font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Container styling */
+#todo-app {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#todo-app h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Input and button styling */
+#new-todo {
+  width: 70%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#add-btn,
+#clear-completed {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  background: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#add-btn:hover,
+#clear-completed:hover {
+  background: #2980b9; /* slightly darker accent */
+}
+
+/* Todo list styling */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+#todo-list li button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Completed items */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+footer button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+footer button:hover {
+  background: #1a252f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #todo-app {
+    padding: 1rem;
+  }
+
+  #new-todo {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  #add-btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
